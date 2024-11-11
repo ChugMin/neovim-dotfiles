@@ -17,9 +17,9 @@
 - Using choco to install llvm for tree-sitter working: (Windows) choco install llvm
 
 #  SOURCE I AM USING
-KOMASTER.DEV:
++ KOMASTER.DEV:
 - https://komaster.dev/post/cai-dat-neovim-tren-windows-lazynvim-theme-tree-sitter-lualine
 - https://komaster.dev/post/cai-dat-neovim-tren-windows-telescope-nvim-tree-bufferline
 - https://komaster.dev/post/cai-dat-neovim-tren-windows-keymap
-LAZYVIM.ORG
-MEDIUM.COM : https://medium.com/@shaikzahid0713/the-neovim-series-32163eb1f5d0
++ LAZYVIM.ORG
++ MEDIUM.COM : https://medium.com/@shaikzahid0713/the-neovim-series-32163eb1f5d0
