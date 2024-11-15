@@ -46,4 +46,4 @@ keymap.set('n', '@', ':NvimTreeFindFile<cr>')
 -- Duplicate line
 keymap.set('n', '<C-d>', 'yyp')
 
-vim.api.nvim_set_keymap("n", "<F5>", ":w | !g++ -std=c++17 % -o %:r.exe && %:r.exe<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<F5>", ":cd %:p:h | w | !g++ -std=c++17 % -o %:r.exe && %:r.exe<CR>", { noremap = true, silent = true })
