@@ -1,7 +1,6 @@
 -- /lua/map.lua
 
 local keymap = vim.keymap
-
 keymap.set('n', '<C-a>', 'gg<S-v>G')
 -- Toggle NeoTree sidebar
 keymap.set('n', '<leader>e', ':NvimTreeToggle<cr>')
@@ -47,3 +46,11 @@ keymap.set('n', '@', ':NvimTreeFindFile<cr>')
 keymap.set('n', '<C-d>', 'yyp')
 
 vim.api.nvim_set_keymap("n", "<F5>", ":cd %:p:h | w | !g++ -std=c++17 % -o %:r.exe && %:r.exe<CR>", { noremap = true, silent = true })
+
+-- Switch tabs
+vim.keymap.set('n', '<Tab>', ':BufferLineCycleNext<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<S-Tab>', ':BufferLineCyclePrev<CR>', { noremap = true, silent = true })
+
+-- Bind to a key (e.g., <Leader>l for layout)
+vim.api.nvim_set_keymap('n', '<Leader>l', ':lua require("window_layouts").SetupCustomLayoutForCPP()<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>re', ':lua require("window_layouts").RESIZE()<CR>', { noremap = true, silent = true })

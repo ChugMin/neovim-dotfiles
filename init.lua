@@ -1,4 +1,5 @@
 -- init.lua
+require('window_layouts') -- Ensure the module is loaded
 
 require('base')   -- load file `/lua/base.lua`
 require('plugins')   -- load file `/lua/plugins.lua`

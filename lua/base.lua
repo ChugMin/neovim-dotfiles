@@ -38,17 +38,3 @@ vim.opt.updatetime = 250
 vim.o.ignorecase = true
 vim.o.smartcase = true
 
--- Auto-save with 1-second delay after changes
-local timer = vim.loop.new_timer()
-vim.api.nvim_create_autocmd({ "TextChanged", "TextChangedI" }, {
-  pattern = "*",
-  callback = function()
-    timer:stop()
-    timer:start(1000, 0, vim.schedule_wrap(function()
-      if vim.bo.modifiable and vim.bo.modified then
-        vim.cmd("silent! write")
-      end
-    end))
-  end,
-})
-
