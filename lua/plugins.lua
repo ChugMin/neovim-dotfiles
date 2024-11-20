@@ -81,6 +81,8 @@ require("lazy").setup({
             -- Snippets
             {'L3MON4D3/LuaSnip'},             -- Required
             {'rafamadriz/friendly-snippets'}, -- Optional
+            
+            {"onsails/lspkind.nvim"},
         }
     },
 	{
@@ -88,4 +90,19 @@ require("lazy").setup({
     },
 
 	{'akinsho/toggleterm.nvim', version = "*", config = true},
+
+    {
+        "Pocco81/auto-save.nvim",
+        config = function()
+          require("auto-save").setup({
+            enabled = true, -- Auto-save is enabled by default
+            execution_message = {
+              message = function() return "" end, -- Disable save messages
+            },
+            trigger_events = { "InsertLeave", "TextChanged" }, -- Save on insert leave or text change
+          })
+        end,
+    },
+      
+
 })
