@@ -61,6 +61,12 @@ require("lazy").setup({
         "goolord/alpha-nvim",
         lazy = true,
     },
+    {
+        'williamboman/mason.nvim',
+        config = function()
+            require('mason').setup()
+        end
+    },    
 	{
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v1.x',
