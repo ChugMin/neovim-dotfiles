@@ -21,8 +21,7 @@ vim.opt.tabstop = 4
 vim.opt.ai = true
 vim.opt.si = true
 
--- Tự động xuống dòng nếu kí tự trên dòng đó quá dài
-vim.opt.wrap = true
+
 
 vim.opt.cursorline = true
 vim.opt.termguicolors = true

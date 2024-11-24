@@ -54,3 +54,5 @@ vim.keymap.set('n', '<S-Tab>', ':BufferLineCyclePrev<CR>', { noremap = true, sil
 -- Bind to a key (e.g., <Leader>l for layout)
 vim.api.nvim_set_keymap('n', '<Leader>l', ':lua require("window_layouts").SetupCustomLayoutForCPP()<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>re', ':lua require("window_layouts").RESIZE()<CR>', { noremap = true, silent = true })
+
+vim.keymap.set('n', '<leader>to', ':tabonly | bufdo bd<CR>', { desc = 'Close current tab' })
