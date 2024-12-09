@@ -22,7 +22,7 @@ ls.add_snippets("cpp", {
             "    ios_base::sync_with_stdio(false);",
             "    cin.tie(nullptr); cout.tie(nullptr);",
             "",
-			'	 freopen(NAME".inp", "r", stdin);',
+			'    freopen(NAME".inp", "r", stdin);',
 			'    freopen(NAME".out", "w", stdout);',
             "}",
         }),
@@ -45,6 +45,29 @@ ls.add_snippets("cpp", {
             "// ⡝⡵⡈⢟⢕⢕⢕⢕⣵⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣶⣿⣿⣿⣿⣿⠿⠋⣀⣈⠙ '",
             "// ⡝⡵⡕⡀⠑⠳⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠛⢉⡠⡲⡫⡪⡪⡣ '",
             "// '"
+        }),
+    }),
+    s("begin", {
+        t({
+			
+            "#include <bits/stdc++.h>",
+			"#define sieztery signed main",
+            "",
+            "using namespace std;",
+            "",
+			"const int maxn = 1e6 + 7;",
+			"",
+            "sieztery() {",
+            "    ios_base::sync_with_stdio(false);",
+            "    cin.tie(nullptr); cout.tie(nullptr);",
+            "",
+            "}",
+        }),
+    }),    
+    s("filing", {
+        t({
+            '    freopen(NAME".inp", "r", stdin);',
+			'    freopen(NAME".out", "w", stdout);',
         }),
     }),
 })

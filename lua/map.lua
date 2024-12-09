@@ -1,4 +1,5 @@
 -- /lua/map.lua
+local cpp = require("CPP")
 
 local keymap = vim.keymap
 keymap.set('n', '<C-a>', 'gg<S-v>G')
@@ -56,3 +57,11 @@ vim.api.nvim_set_keymap('n', '<Leader>l', ':lua require("window_layouts").SetupC
 vim.api.nvim_set_keymap('n', '<leader>re', ':lua require("window_layouts").RESIZE()<CR>', { noremap = true, silent = true })
 
 vim.keymap.set('n', '<leader>to', ':tabonly | bufdo bd<CR>', { desc = 'Close current tab' })
+
+-- Map keys for compile and run
+vim.keymap.set("n", "<F6>", cpp.compile_and_run_cpp, { noremap = true, silent = true })
+vim.keymap.set("n", "<F9>", function()
+    vim.cmd("write")
+    vim.cmd("silent !cls")
+    cpp.compile_and_run_cpp()
+end, { noremap = true, silent = true })
