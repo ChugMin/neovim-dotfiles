@@ -116,6 +116,23 @@ require("lazy").setup({
 	  config = function()
 		require('Comment').setup()
 	  end
-    }
+    },
+    {
+        "lukas-reineke/indent-blankline.nvim",
+        main = "ibl",
+        ---@module "ibl"
+        ---@type ibl.config
+        opts = {},
+    },
+
+    {
+        "akinsho/toggleterm.nvim",
+        opts = {
+            open_mapping = [[<C-\>]],
+            direction = "float",
+        },
+    },
+    
+
 
 })

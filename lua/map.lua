@@ -1,5 +1,6 @@
 -- /lua/map.lua
 local cpp = require("CPP")
+local cppf = require("CPPF")
 
 local keymap = vim.keymap
 keymap.set('n', '<C-a>', 'gg<S-v>G')
@@ -46,7 +47,6 @@ keymap.set('n', '@', ':NvimTreeFindFile<cr>')
 -- Duplicate line
 keymap.set('n', '<C-d>', 'yyp')
 
-vim.api.nvim_set_keymap("n", "<F5>", ":cd %:p:h | w | !g++ -std=c++17 % -o %:r.exe && %:r.exe<CR>", { noremap = true, silent = true })
 
 -- Switch tabs
 vim.keymap.set('n', '<Tab>', ':BufferLineCycleNext<CR>', { noremap = true, silent = true })
@@ -58,10 +58,5 @@ vim.api.nvim_set_keymap('n', '<leader>re', ':lua require("window_layouts").RESIZ
 
 vim.keymap.set('n', '<leader>to', ':tabonly | bufdo bd<CR>', { desc = 'Close current tab' })
 
--- Map keys for compile and run
-vim.keymap.set("n", "<F6>", cpp.compile_and_run_cpp, { noremap = true, silent = true })
-vim.keymap.set("n", "<F9>", function()
-    vim.cmd("write")
-    vim.cmd("silent !cls")
-    cpp.compile_and_run_cpp()
-end, { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<F6>", ":lua require('CPP').run_cpp()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<F5>", ":cd %:p:h | w | !g++ -std=c++17 % -o %:r.exe && %:r.exe<CR>", { noremap = true, silent = true })
